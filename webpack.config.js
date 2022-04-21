@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-    context: path.resolve(__dirname, 'src'),
     entry: './index.js',
     output: {
         filename: '[name].js',
@@ -11,7 +10,7 @@ module.exports = {
     target: 'web',
     devServer: {
         static: {
-            directory: path.join(__dirname, 'src'),
+            directory: __dirname
         },
         port: 3000,
         open: true,
